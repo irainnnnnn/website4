@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - AJRB Printing Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    .contact-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      animation: fadeInSlide 1s ease-in-out;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #ff5e57;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 18px;
+      color: #e0e0e0;
+    }
+
+    .contact-info p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .contact-info span {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .back-home {
+      display: block;
+      margin: 30px auto 0;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #ff5e57;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+
+    .back-home:hover {
+      background-color: #e04e48;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 94, 87, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <img src="images/logo.png" alt="AJRB Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="promo.html">Promo</a></li>
+          <li><a href="contact.html" class="contact-btn">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><span>Phone:</span> 09171641540</p>
+      <p><span>Email:</span> ajrbprintingsolutions2019@gmail.com</p>
+      <p><span>Address:</span> GK Chua bldg. Lopez Jaena St. Subangdaku Mandaue City, Cebu</p>
+      <p><span>Viber:</span> 09420520079</p>
+    </div>
+    <a class="back-home" href="index.html">Back to Home</a>
+  </section>
+</body>
+</html>

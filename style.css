@@ -1,0 +1,271 @@
+/* General Reset and Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #1f1f1f, #111);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  line-height: 1.6;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar Styles */
+header {
+  background-color: #000;
+  padding: 2px 0; /* Further reduced padding */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 20px; /* Further reduced padding */
+  min-height: 110px; /* Reduced height */
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 160px;
+  width: auto;
+  object-fit: contain;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0px #ff5e57);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #ff5e57);
+  }
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline on navbar */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Contact Us Button Style */
+.contact-btn {
+  background-color: #ff5e57;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #e04e48;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 94, 87, 0.4);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px 10px; /* Further reduced top spacing */
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #ff5e57;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.hero-text:hover {
+  transform: scale(1.02);
+}
+
+.hero-image img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px 10px; /* Further reduced top spacing */
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.about-image img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Product Table */
+.product-section h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 36px;
+}
+
+.product-table {
+  width: 90%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.product-table td {
+  background-color: #2a2a2a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero,
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px 5px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p,
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .about-image img,
+  .hero-image img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
